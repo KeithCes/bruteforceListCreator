@@ -32,20 +32,23 @@ def listGenerate():
         maxRange = 39
     else:
         print("Please input a valid/smaller range: ")
-    loops1 = 1
-    loops2 = 1
-#    loops3 = 0
+    loops = 1
+    currentList = []
     if maxRange > 0:
-        iterate(loops1, 3, 1)
+        iterate(loops, 3, 0, currentList)
         maxRange -= 3
     if maxRange > 0:
-        iterate(loops2, 9, 2)
+        iterate2(loops, 9, 0, currentList)
         maxRange -= 9
+    if maxRange > 0:
+        iterate3(loops, 27, 0, currentList)
+        maxRange -= 27
 
 
-def iterate(loops, localRange, loopNumber):
-    currentList = []
+def iterate(loops, localRange, carry, currentList):
     while localRange > 0:
+        if isinstance(carry, str):
+            currentList.append(carry)
         if loops == 1:
             currentList.append("a")
             loops += 1
@@ -54,6 +57,40 @@ def iterate(loops, localRange, loopNumber):
             loops += 1
         elif loops == 3:
             currentList.append("c")
+            loops = 0
+        localRange -= 1
+        resetList(currentList)
+
+
+def iterate2(loops, localRange, carry, currentList):
+    while localRange > 0:
+        if isinstance(carry, str):
+            currentList.append(carry)
+        if loops == 1:
+            iterate(1, 3, "a", currentList)
+            loops += 1
+        elif loops == 2:
+            iterate(1, 3, "b", currentList)
+            loops += 1
+        elif loops == 3:
+            iterate(1, 3, "c", currentList)
+            loops = 0
+        localRange -= 1
+        resetList(currentList)
+
+
+def iterate3(loops, localRange, carry, currentList):
+    while localRange > 0:
+        if isinstance(carry, str):
+            currentList.append(carry)
+        if loops == 1:
+            iterate2(1, 3, "a", currentList)
+            loops += 1
+        elif loops == 2:
+            iterate2(1, 3, "b", currentList)
+            loops += 1
+        elif loops == 3:
+            iterate2(1, 3, "c", currentList)
             loops = 0
         localRange -= 1
         resetList(currentList)
