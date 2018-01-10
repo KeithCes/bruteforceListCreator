@@ -1,7 +1,6 @@
-# bruteforceListCreator
-A python script that creates a list of all lower-case letter combinations from a chosen maximum to 1. Useful to create password lists to brute-force weak passwords.
-
 # If you would like to download an executable edition please download the entire "RELEASE" folder and run the main executable file.
+
+A python script that creates a list of all lower-case letter combinations from a chosen maximum to 1. Useful to create password lists to brute-force weak passwords.
 
 Example:
 Choosing 2 would start the script creating "aa" then "ab" to "zz" to "a" to finally "z" with all other letter combinations inbetween.
