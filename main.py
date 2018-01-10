@@ -32,8 +32,8 @@ def listGenerate():
         maxRange = 39
     else:
         print("Please input a valid/smaller range: ")
-    loops1 = 1
-    iterate3(loops1, maxRange)
+    loops = 1
+    iterate3(loops, maxRange)
 
 
 def iterate(loops, maxRange, lst, carry):
@@ -42,15 +42,17 @@ def iterate(loops, maxRange, lst, carry):
             lst.append(str(carry) + "a")
             loops += 1
             maxRange -= 1
+            print("".join(lst))
         elif loops == 2:
             lst.append(str(carry) + "b")
             loops += 1
             maxRange -= 1
+            print("".join(lst))
         elif loops == 3:
             lst.append(str(carry) + "c")
             loops = 0
             maxRange -= 1
-        print("".join(lst))
+            print("".join(lst))
         lst.clear()
 
 
@@ -71,7 +73,6 @@ def iterate2(loops, maxRange, lst, carry):
         elif maxRange == 3:
             iterate(1, maxRange, [], "")
             maxRange -= 3
-        print("".join(lst))
         lst.clear()
 
 
@@ -96,7 +97,6 @@ def iterate3(loops, maxRange):
             iterate2(1, 9, currentList, "c")
             loops = 0
             maxRange -= 9
-        print("".join(currentList))
         currentList.clear()
 
 listGenerate()
