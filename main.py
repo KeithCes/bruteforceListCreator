@@ -27,10 +27,14 @@ def listGenerate():
         maxRange = 702
     elif userInput == 3:
         maxRange = 18278
+    elif userInput == 4:
+        maxRange = 475254
+    elif userInput == 5:
+        maxRange = 11881376
     else:
         print("Please input a valid/smaller range: ")
     loops = 1
-    iterate3(loops, maxRange)
+    iterate5(loops, maxRange)
 
 
 def iterate(loops, maxRange, lst, carry):
@@ -280,7 +284,240 @@ def iterate2(loops, maxRange, lst, carry):
         lst.clear()
 
 
-def iterate3(loops, maxRange):
+def iterate3(loops, maxRange, lst, carry):
+    while maxRange > 0:
+        if loops == 1:
+            iterate2(1, 676, lst, str(carry) + "a")
+            loops += 1
+            maxRange -= 676
+        elif loops == 2:
+            iterate2(1, 676, lst, str(carry) + "b")
+            loops += 1
+            maxRange -= 676
+        elif loops == 3:
+            iterate2(1, 676, lst, str(carry) + "c")
+            loops += 1
+            maxRange -= 676
+        elif loops == 4:
+            iterate2(1, 676, lst, str(carry) + "d")
+            loops += 1
+            maxRange -= 676
+        elif loops == 5:
+            iterate2(1, 676, lst, str(carry) + "e")
+            loops += 1
+            maxRange -= 676
+        elif loops == 6:
+            iterate2(1, 676, lst, str(carry) + "f")
+            loops += 1
+            maxRange -= 676
+        elif loops == 7:
+            iterate2(1, 676, lst, str(carry) + "g")
+            loops += 1
+            maxRange -= 676
+        elif loops == 8:
+            iterate2(1, 676, lst, str(carry) + "h")
+            loops += 1
+            maxRange -= 676
+        elif loops == 9:
+            iterate2(1, 676, lst, str(carry) + "i")
+            loops += 1
+            maxRange -= 676
+        elif loops == 10:
+            iterate2(1, 676, lst, str(carry) + "j")
+            loops += 1
+            maxRange -= 676
+        elif loops == 11:
+            iterate2(1, 676, lst, str(carry) + "k")
+            loops += 1
+            maxRange -= 676
+        elif loops == 12:
+            iterate2(1, 676, lst, str(carry) + "l")
+            loops += 1
+            maxRange -= 676
+        elif loops == 13:
+            iterate2(1, 676, lst, str(carry) + "m")
+            loops += 1
+            maxRange -= 676
+        elif loops == 14:
+            iterate2(1, 676, lst, str(carry) + "n")
+            loops += 1
+            maxRange -= 676
+        elif loops == 15:
+            iterate2(1, 676, lst, str(carry) + "o")
+            loops += 1
+            maxRange -= 676
+        elif loops == 16:
+            iterate2(1, 676, lst, str(carry) + "p")
+            loops += 1
+            maxRange -= 676
+        elif loops == 17:
+            iterate2(1, 676, lst, str(carry) + "q")
+            loops += 1
+            maxRange -= 676
+        elif loops == 18:
+            iterate2(1, 676, lst, str(carry) + "r")
+            loops += 1
+            maxRange -= 676
+        elif loops == 19:
+            iterate2(1, 676, lst, str(carry) + "s")
+            loops += 1
+            maxRange -= 676
+        elif loops == 20:
+            iterate2(1, 676, lst, str(carry) + "t")
+            loops += 1
+            maxRange -= 676
+        elif loops == 21:
+            iterate2(1, 676, lst, str(carry) + "u")
+            loops += 1
+            maxRange -= 676
+        elif loops == 22:
+            iterate2(1, 676, lst, str(carry) + "v")
+            loops += 1
+            maxRange -= 676
+        elif loops == 23:
+            iterate2(1, 676, lst, str(carry) + "w")
+            loops += 1
+            maxRange -= 676
+        elif loops == 24:
+            iterate2(1, 676, lst, str(carry) + "x")
+            loops += 1
+            maxRange -= 676
+        elif loops == 25:
+            iterate2(1, 676, lst, str(carry) + "y")
+            loops += 1
+            maxRange -= 676
+        elif loops == 26:
+            iterate2(1, 676, lst, str(carry) + "z")
+            loops = 0
+            maxRange -= 676
+        elif maxRange == 26:
+            iterate(1, maxRange, [], "")
+            maxRange -= 26
+        elif maxRange == 702:
+            iterate2(1, maxRange, [], "")
+            maxRange -= 702
+        lst.clear()
+
+
+def iterate4(loops, maxRange, lst, carry):
+    while maxRange > 0:
+        if loops == 1:
+            iterate3(1, 17576, lst, str(carry) + "a")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 2:
+            iterate3(1, 17576, lst, str(carry) + "b")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 3:
+            iterate3(1, 17576, lst, str(carry) + "c")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 4:
+            iterate3(1, 17576, lst, str(carry) + "d")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 5:
+            iterate3(1, 17576, lst, str(carry) + "e")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 6:
+            iterate3(1, 17576, lst, str(carry) + "f")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 7:
+            iterate3(1, 17576, lst, str(carry) + "g")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 8:
+            iterate3(1, 17576, lst, str(carry) + "h")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 9:
+            iterate3(1, 17576, lst, str(carry) + "i")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 10:
+            iterate3(1, 17576, lst, str(carry) + "j")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 11:
+            iterate3(1, 17576, lst, str(carry) + "k")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 12:
+            iterate3(1, 17576, lst, str(carry) + "l")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 13:
+            iterate3(1, 17576, lst, str(carry) + "m")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 14:
+            iterate3(1, 17576, lst, str(carry) + "n")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 15:
+            iterate3(1, 17576, lst, str(carry) + "o")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 16:
+            iterate3(1, 17576, lst, str(carry) + "p")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 17:
+            iterate3(1, 17576, lst, str(carry) + "q")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 18:
+            iterate3(1, 17576, lst, str(carry) + "r")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 19:
+            iterate3(1, 17576, lst, str(carry) + "s")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 20:
+            iterate3(1, 17576, lst, str(carry) + "t")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 21:
+            iterate3(1, 17576, lst, str(carry) + "u")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 22:
+            iterate3(1, 17576, lst, str(carry) + "v")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 23:
+            iterate3(1, 17576, lst, str(carry) + "w")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 24:
+            iterate3(1, 17576, lst, str(carry) + "x")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 25:
+            iterate3(1, 17576, lst, str(carry) + "y")
+            loops += 1
+            maxRange -= 17576
+        elif loops == 26:
+            iterate3(1, 17576, lst, str(carry) + "z")
+            loops = 0
+            maxRange -= 17576
+        elif maxRange == 26:
+            iterate(1, maxRange, [], str(carry) + "")
+            maxRange -= 26
+        elif maxRange == 702:
+            iterate2(1, maxRange, [], str(carry) + "")
+            maxRange -= 702
+        elif maxRange == 18278:
+            iterate3(1, maxRange, [], str(carry) + "")
+            maxRange -= 18278
+        lst.clear()
+
+
+def iterate5(loops, maxRange):
     currentList = []
     while maxRange > 0:
         if maxRange == 26:
@@ -289,110 +526,116 @@ def iterate3(loops, maxRange):
         elif maxRange == 702:
             iterate2(1, maxRange, [], "")
             maxRange -= 702
+        elif maxRange == 18278:
+            iterate3(1, maxRange, [], "")
+            maxRange -= 18278
+        elif maxRange == 475254:
+            iterate4(1, maxRange, [], "")
+            maxRange -= 475254
         elif loops == 1:
-            iterate2(1, 676, currentList, "a")
+            iterate4(1, 456976, currentList, "a")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 2:
-            iterate2(1, 676, currentList, "b")
+            iterate4(1, 456976, currentList, "b")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 3:
-            iterate2(1, 676, currentList, "c")
+            iterate4(1, 456976, currentList, "c")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 4:
-            iterate2(1, 676, currentList, "d")
+            iterate4(1, 456976, currentList, "d")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 5:
-            iterate2(1, 676, currentList, "e")
+            iterate4(1, 456976, currentList, "e")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 6:
-            iterate2(1, 676, currentList, "f")
+            iterate4(1, 456976, currentList, "f")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 7:
-            iterate2(1, 676, currentList, "g")
+            iterate4(1, 456976, currentList, "g")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 8:
-            iterate2(1, 676, currentList, "h")
+            iterate4(1, 456976, currentList, "h")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 9:
-            iterate2(1, 676, currentList, "i")
+            iterate4(1, 456976, currentList, "i")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 10:
-            iterate2(1, 676, currentList, "j")
+            iterate4(1, 456976, currentList, "j")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 11:
-            iterate2(1, 676, currentList, "k")
+            iterate4(1, 456976, currentList, "k")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 12:
-            iterate2(1, 676, currentList, "l")
+            iterate4(1, 456976, currentList, "l")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 13:
-            iterate2(1, 676, currentList, "m")
+            iterate4(1, 456976, currentList, "m")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 14:
-            iterate2(1, 676, currentList, "n")
+            iterate4(1, 456976, currentList, "n")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 15:
-            iterate2(1, 676, currentList, "o")
+            iterate4(1, 456976, currentList, "o")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 16:
-            iterate2(1, 676, currentList, "p")
+            iterate4(1, 456976, currentList, "p")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 17:
-            iterate2(1, 676, currentList, "q")
+            iterate4(1, 456976, currentList, "q")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 18:
-            iterate2(1, 676, currentList, "r")
+            iterate4(1, 456976, currentList, "r")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 19:
-            iterate2(1, 676, currentList, "s")
+            iterate4(1, 456976, currentList, "s")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 20:
-            iterate2(1, 676, currentList, "t")
+            iterate4(1, 456976, currentList, "t")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 21:
-            iterate2(1, 676, currentList, "u")
+            iterate4(1, 456976, currentList, "u")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 22:
-            iterate2(1, 676, currentList, "v")
+            iterate4(1, 456976, currentList, "v")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 23:
-            iterate2(1, 676, currentList, "w")
+            iterate4(1, 456976, currentList, "w")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 24:
-            iterate2(1, 676, currentList, "x")
+            iterate4(1, 456976, currentList, "x")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 25:
-            iterate2(1, 676, currentList, "y")
+            iterate4(1, 456976, currentList, "y")
             loops += 1
-            maxRange -= 676
+            maxRange -= 456976
         elif loops == 26:
-            iterate2(1, 676, currentList, "z")
+            iterate4(1, 456976, currentList, "z")
             loops = 0
-            maxRange -= 676
+            maxRange -= 456976
         currentList.clear()
 
 listGenerate()
