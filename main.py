@@ -32,73 +32,75 @@ def listGenerate():
         maxRange = 39
     else:
         print("Please input a valid/smaller range: ")
-    loops = 1
+    loops1 = 1
+    iterate3(loops1, maxRange)
+
+
+def iterate(loops, maxRange, lst, carry):
+    while maxRange > 0:
+        if loops == 1:
+            lst.append(str(carry) + "a")
+            loops += 1
+            maxRange -= 1
+        elif loops == 2:
+            lst.append(str(carry) + "b")
+            loops += 1
+            maxRange -= 1
+        elif loops == 3:
+            lst.append(str(carry) + "c")
+            loops = 1
+            maxRange -= 1
+        print("".join(lst))
+        lst.clear()
+
+
+def iterate2(loops, maxRange, lst, carry):
+    while maxRange > 0:
+        if maxRange == 3:
+            iterate(1, maxRange, [], "")
+            maxRange -= 3
+        elif loops == 1:
+            iterate(1, 3, lst, str(carry) + "a")
+            loops += 1
+            maxRange -= 3
+        elif loops == 2:
+            iterate(1, 3, lst, str(carry) + "b")
+            loops += 1
+            maxRange -= 3
+        elif loops == 3:
+            iterate(1, 3, lst, str(carry) + "c")
+            loops = 1
+            maxRange -= 3
+        print("".join(lst))
+        lst.clear()
+    else:
+        iterate(1, maxRange, [], "")
+
+
+def iterate3(loops, maxRange):
     currentList = []
-    if maxRange > 0:
-        iterate(loops, 3, 0, currentList)
-        maxRange -= 3
-    if maxRange > 0:
-        iterate2(loops, 9, 0, currentList)
-        maxRange -= 9
-    if maxRange > 0:
-        iterate3(loops, 27, 0, currentList)
-        maxRange -= 27
-
-
-def iterate(loops, localRange, carry, currentList):
-    while localRange > 0:
-        if isinstance(carry, str):
-            currentList.append(carry)
-        if loops == 1:
-            currentList.append("a")
+    while maxRange > 0:
+        if maxRange == 3:
+            iterate(1, maxRange, [], "")
+            maxRange -= 3
+        elif maxRange == 12:
+            iterate2(1, maxRange, [], "")
+            maxRange -= 12
+        elif loops == 1:
+            iterate2(1, 12, currentList, "a")
             loops += 1
+            maxRange -= 12
         elif loops == 2:
-            currentList.append("b")
+            iterate2(1, 12, currentList, "b")
             loops += 1
+            maxRange -= 12
         elif loops == 3:
-            currentList.append("c")
-            loops = 0
-        localRange -= 1
-        resetList(currentList)
-
-
-def iterate2(loops, localRange, carry, currentList):
-    while localRange > 0:
-        if isinstance(carry, str):
-            currentList.append(carry)
-        if loops == 1:
-            iterate(1, 3, "a", currentList)
-            loops += 1
-        elif loops == 2:
-            iterate(1, 3, "b", currentList)
-            loops += 1
-        elif loops == 3:
-            iterate(1, 3, "c", currentList)
-            loops = 0
-        localRange -= 1
-        resetList(currentList)
-
-
-def iterate3(loops, localRange, carry, currentList):
-    while localRange > 0:
-        if isinstance(carry, str):
-            currentList.append(carry)
-        if loops == 1:
-            iterate2(1, 3, "a", currentList)
-            loops += 1
-        elif loops == 2:
-            iterate2(1, 3, "b", currentList)
-            loops += 1
-        elif loops == 3:
-            iterate2(1, 3, "c", currentList)
-            loops = 0
-        localRange -= 1
-        resetList(currentList)
-
-
-def resetList(lst):
-    print("".join(lst))
-    lst.clear()
-
+            iterate2(1, 12, currentList, "c")
+            loops = 1
+            maxRange -= 12
+        print("".join(currentList))
+        currentList.clear()
 
 listGenerate()
+
+
