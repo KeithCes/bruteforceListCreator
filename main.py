@@ -48,7 +48,7 @@ def iterate(loops, maxRange, lst, carry):
             maxRange -= 1
         elif loops == 3:
             lst.append(str(carry) + "c")
-            loops = 1
+            loops = 0
             maxRange -= 1
         print("".join(lst))
         lst.clear()
@@ -56,10 +56,7 @@ def iterate(loops, maxRange, lst, carry):
 
 def iterate2(loops, maxRange, lst, carry):
     while maxRange > 0:
-        if maxRange == 3:
-            iterate(1, maxRange, [], "")
-            maxRange -= 3
-        elif loops == 1:
+        if loops == 1:
             iterate(1, 3, lst, str(carry) + "a")
             loops += 1
             maxRange -= 3
@@ -69,12 +66,13 @@ def iterate2(loops, maxRange, lst, carry):
             maxRange -= 3
         elif loops == 3:
             iterate(1, 3, lst, str(carry) + "c")
-            loops = 1
+            loops = 0
+            maxRange -= 3
+        elif maxRange == 3:
+            iterate(1, maxRange, [], "")
             maxRange -= 3
         print("".join(lst))
         lst.clear()
-    else:
-        iterate(1, maxRange, [], "")
 
 
 def iterate3(loops, maxRange):
@@ -87,17 +85,17 @@ def iterate3(loops, maxRange):
             iterate2(1, maxRange, [], "")
             maxRange -= 12
         elif loops == 1:
-            iterate2(1, 12, currentList, "a")
+            iterate2(1, 9, currentList, "a")
             loops += 1
-            maxRange -= 12
+            maxRange -= 9
         elif loops == 2:
-            iterate2(1, 12, currentList, "b")
+            iterate2(1, 9, currentList, "b")
             loops += 1
-            maxRange -= 12
+            maxRange -= 9
         elif loops == 3:
-            iterate2(1, 12, currentList, "c")
-            loops = 1
-            maxRange -= 12
+            iterate2(1, 9, currentList, "c")
+            loops = 0
+            maxRange -= 9
         print("".join(currentList))
         currentList.clear()
 
